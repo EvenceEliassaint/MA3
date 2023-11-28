@@ -1,0 +1,125 @@
+// Variable Declarations
+$background-color: white;
+$text-color: black;
+$accent-color: gold;
+
+// General Styling
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, p {
+    margin: 0;
+}
+
+.center-text {
+    text-align: center;
+}
+
+// Header Styling
+header {
+    height: 100vh;
+    background: url('IMG_8344.jpg') center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    position: relative;
+
+    // Add a black header on top with tabs
+    .header-tabs {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        background-color: black;
+        padding: 10px;
+        text-align: center;
+
+        // Add styling for tabs if needed
+        a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+    }
+
+    // Place the header in the center in a bigger font size
+    h1 {
+        font-size: 50px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    p{
+        text-align: center;
+    }
+}
+
+.year-section {
+    padding: 50px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left; // Align text to the left
+    
+    &:nth-child(2) {
+        background: url('IMG_16732.JPG')center/cover no-repeat; // Add a different background color for odd-numbered years
+        margin-top: 10px;
+        margin-bottom: 10px;
+        h2{
+            color: white;
+        }
+    }
+
+    &:nth-child(3) {
+        background: url('IMG_16741.JPG')center/cover no-repeat; // Add a different background color for even-numbered years
+        margin-top: 10px;
+        margin-bottom: 10px;
+        h2{
+            color: black;
+        }
+        p{
+            color: black;
+        }
+    }
+    &:nth-child(4) {
+        background: url('IMG_16752.JPG')center/cover no-repeat; // Add a different background color for even-numbered years
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    h2 {
+        margin-bottom: 5px;
+        font-size: 50px;
+
+    }
+
+    .year-content {
+        display: flex;
+        align-items: center;
+        max-width: 800px;
+        margin-bottom: 20px; // Add space between text and images
+        margin: 50px;
+
+        // Small square images under each year
+        .year-images {
+            display: flex;
+
+            img {
+                width: auto;
+                height: 270px;
+                border-radius: 10px;
+                margin: 50px;
+                transition: transform 0.3s ease-in-out; // Smooth transition on hover
+                &:hover {
+                    transform: scale(1.2);
+                }
+            }
+        }
+    }
+}
